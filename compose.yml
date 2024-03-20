@@ -1,0 +1,12 @@
+services:
+  zte:
+    build: .
+    container_name: zte-5g
+    image: dckr.woland.xyz/zte-5g
+    restart: unless-stopped
+    environment:
+      - ZTE_PASS=${ZTE_PASS}
+      - ZTE_HOST=${ZTE_HOST}
+      - LOG=${LOG}
+      - INFLUXDB_TOKEN=${INFLUXDB_TOKEN}
+      - INFLUXDB_URL=${INFLUXDB_URL}
